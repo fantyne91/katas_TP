@@ -7,24 +7,28 @@ const movies = [
   { name: "Star Wars: A New Hope", durationInMinutes: 214 },
   { name: "Terminator", durationInMinutes: 140 },
 ];
-let pequeña = [];
-let mediana = [];
-let grande = [];
+    
+        
+const pequeña = movies.filter((m) => m.durationInMinutes < 100);
+const mediana = movies.filter((m) => m.durationInMinutes > 100 && m.durationInMinutes<200);
+const grande = movies.filter((m) => m.durationInMinutes > 200); 
+// let pequeña = [];
+// let mediana = [];
+// let grande = [];
 
-for (let i of movies) {
-    if (i.durationInMinutes < 100) {
-        pequeña.push(i);        
-    } else if (i.durationInMinutes > 100 && i.durationInMinutes < 200) {
-        mediana.push(i);   
-    } else {        
-        grande.push(i);  
-    }
-   
-}
-console.log(`pequeña:`,pequeña);
-console.log(`mediana:`, mediana);
+// for (let i of movies) {
+//   if (i.durationInMinutes < 100) {
+//     pequeña.push(i);
+//   } else if (i.durationInMinutes > 100 && i.durationInMinutes < 200) {
+//     mediana.push(i);
+//   } else {
+//     grande.push(i);
+//   }
+// }
+ console.log(`pequeña: `, pequeña);
+ console.log(`mediana:`, mediana);
 
-console.log(`grande:`, grande);
+ console.log(`grande:`, grande);
  
 //EJ 24
 const products = [
