@@ -47,13 +47,12 @@ const products1 = [
   { name: "Varita de Voldemort", sellCount: 6 },
 ];
 let counterSell = 0;
-let counterProduct = 0;
 
 for (let i of products1) {
     counterSell += i.sellCount;
-    counterProduct++;    
+     
 }
-console.log(counterSell / counterProduct);
+console.log(counterSell / products1.length);
 
 //EJ 26
 const goodProducts = [];

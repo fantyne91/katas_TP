@@ -24,6 +24,7 @@ for (let i in placesToTravel) {
     
     if (placesToTravel[i].id == 11 || placesToTravel[i].id == 40) {
       placesToTravel.splice(i, 1);
+      i--;
     }
      
 }
@@ -38,15 +39,25 @@ const toys = [
   { id: 40, name: "El gato con Guantes" },
   { id: 40, name: "El gato felix" },
 ];
-let newArray = [];
+// let newArray = [];
 
-for (let i of toys) {
-    if (!i.name.includes("gato")) {
-        newArray.push(i);      
-        console.log(i.name);
+// for (let i of toys) {
+//     if (!i.name.includes("gato")) {
+//         newArray.push(i);      
+//         console.log(i.name);
        
-    }     
+//     }     
+// }
+for (let i = 0; i < toys.length; i++) {
+  if (toys[i].name.includes("gato")) {
+    toys.splice(i, 1);
+      i--;
+  }
 }
+console.log(toys);
+
+
+
  console.log(" ");
 
 // EJ 20
@@ -96,6 +107,7 @@ const foodSchedule = [
 
 let index = 0;
 for (let i = 0; i < foodSchedule.length; i++){
+  
   if (!foodSchedule[ i ].isVegan) {
     foodSchedule[i].name = fruits[index];
     index++;
